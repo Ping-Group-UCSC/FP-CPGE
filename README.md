@@ -4,7 +4,9 @@ Computes Circular Photogalvanic Effect from first-principles as follows:
 \beta_{ij} = \frac{e^3 \pi}{N_{\boldsymbol{k}}V\hbar} \epsilon_{jkl}\sum_{\boldsymbol{k},n,m}f^{\boldsymbol{k}}_{nm}\Delta^i_{\boldsymbol{k},nm}r^k_{\boldsymbol{k},nm}r^l_{\boldsymbol{k},mn}\delta(\hbar\omega-E_{\boldsymbol{k},nm})
 ```
 
-To compute CPGE first compute energies, velocity and postition matrix elements using JDFTx (other code interfaces are currently not available). Then use the postprocessing script as follows:
+To compute CPGE first compute energies, velocity and postition matrix elements using JDFTx as shown in [sampling_exmples](sampling_example). 
+
+Then use the postprocessing script as follows:
 
 	usage: CPGE.py [-h] --dmu DMU --n_blocks N_BLOCKS --n_bands N_BANDS [--s_band S_BAND] [--domega DOMEGA]
 	               [--omegaMax OMEGAMAX] [--T T] [--prefix PREFIX] [--omegaAnalysis [OMEGAANALYSIS ...]]
