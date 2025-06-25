@@ -1,0 +1,17 @@
+#Input for JDFTx 
+include common.in
+
+elec-cutoff 50
+elec-n-bands 100
+
+kpoint-folding 8 8 8
+
+converge-empty-states yes
+
+initial-state totalE.$VAR
+
+electronic-scf energyDiffThreshold 1e-9 nIterations 500
+
+dump-name totalE.$VAR
+dump Init Symmetries Kpoints Gvectors
+dump End State ElecDensity EigStats BandEigs Vscloc Spin

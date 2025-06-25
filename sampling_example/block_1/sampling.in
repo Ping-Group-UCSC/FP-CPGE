@@ -1,0 +1,11 @@
+include common.in
+include sampling.kpoints.in
+fix-electron-density ../totalE.$VAR   #Fix the electron density (not self-consistent)
+
+converge-empty-states yes
+electronic-minimize energyDiffThreshold 1e-9
+
+symmetries none
+
+dump End BandEigs R Velocities
+dump-name bandstruct.$VAR
